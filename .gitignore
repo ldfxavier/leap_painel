@@ -8,4 +8,4 @@
 /.vscode
 package-lock.json
 /node_modules
-docker-compose.yml
+docker-compose.yml	
