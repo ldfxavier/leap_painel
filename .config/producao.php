@@ -48,7 +48,7 @@ $pdo = [
     'host' => 'localhost',
     'banco' => 'leap',
     'usuario' => 'leap',
-    'senha' => 'leap@1324',
+    'senha' => 'Leap@1324',
 ];
 
 /**
