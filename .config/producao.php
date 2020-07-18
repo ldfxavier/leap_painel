@@ -35,9 +35,9 @@ $imagem = [
  * LINKS DO SISTEMA
  **/
 $link = [
-    'link' => array('localhost', 'leap.art.br'),
-    'painel' => 'http://painel.leap.art.br/painel',
-    'arquivo' => 'http://painel.leap.art.br/arquivos',
+    'link' => array('localhost', 'leap.art.br', 'leap.umprogramador.com.br'),
+    'painel' => 'https://leap.umprogramador.com.br/painel',
+    'arquivo' => 'https://leap.umprogramador.com.br/arquivos',
     'diretorio' => 'arquivos',
 ];
 
