@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CONFIGURAÇÃO GERAL DO HEADER
  **/
@@ -35,7 +36,7 @@ $imagem = [
  * LINKS DO SISTEMA
  **/
 $link = [
-    'link' => array('localhost', 'leap.art.br', 'leap.umprogramador.com.br'),
+    'link' => array('localhost', 'painel.leap.art.br', 'leap.umprogramador.com.br'),
     'painel' => 'https://leap.umprogramador.com.br/painel',
     'arquivo' => 'https://leap.umprogramador.com.br/arquivos',
     'diretorio' => 'arquivos',
@@ -81,6 +82,4 @@ $social = [
 /**
  * DADOS OPCIONAIS DO SISTEMA
  **/
-$opcionais = [
-
-];
+$opcionais = [];
