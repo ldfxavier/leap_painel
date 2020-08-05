@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CONFIGURAÇÃO GERAL DO HEADER
  **/
@@ -21,9 +22,9 @@ $qa_config = array(
  * LINKS DO SISTEMA
  **/
 $qa_link = array(
-    'link' => array('localhost', '192.168.1.8'),
+    'link' => array('localhost', '192.168.1.6'),
     'painel' => 'http://localhost/leap_painel/painel/painel',
-    'arquivo' => 'http://localhost/leap_painel/arquivos',
+    'arquivo' => 'http://localhost/leap_painel/painel/arquivos',
     'diretorio' => 'arquivos',
 );
 
@@ -56,6 +57,4 @@ $qa_facebook = [
 /**
  * DADOS OPCIONAIS DO SISTEMA
  **/
-$qa_opcionais = [
-
-];
+$qa_opcionais = [];

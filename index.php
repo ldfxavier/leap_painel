@@ -15,7 +15,6 @@ function __autoload($file)
     } else if (file_exists(HELPERS . 'sistema/' . $file . ".php")) {
         require_once HELPERS . 'sistema/' . $file . ".php";
     }
-
 }
 
 // Inclui as paginas de configuração do sistema
@@ -35,23 +34,23 @@ if (!empty($config->getConfig()->fuso)) {
 }
 
 // Abilita o erro do PHP se estiver marcado como true
-if (!$config->getConfig()->erro):
+if (!$config->getConfig()->erro) :
     ini_set('display_errors', 0);
     ini_set('display_startup_erros', 0);
     error_reporting(E_NOTICE);
 endif;
 
 // Verifica se a versão (WWWW) está correta, se não, redireciona
-if ($config->getConfig()->www === true && !strstr(LINK, 'www.')):
+if ($config->getConfig()->www === true && !strstr(LINK, 'www.')) :
     header('LOCATION: ' . str_replace('://', '://www.', LINK));
-elseif ($config->getConfig()->www === false && strstr(LINK, 'www.')):
+elseif ($config->getConfig()->www === false && strstr(LINK, 'www.')) :
     header('LOCATION: ' . str_replace('://www.', '://', LINK));
 endif;
 
 // Verifica se o protocolo está correto, se não, redireciona
-if ($config->getConfig()->https === true && !strstr(LINK, 'https://')):
+if ($config->getConfig()->https === true && !strstr(LINK, 'https://')) :
     header('LOCATION: ' . str_replace('http://', 'https://', LINK));
-elseif ($config->getConfig()->https === false && strstr(LINK, 'https://')):
+elseif ($config->getConfig()->https === false && strstr(LINK, 'https://')) :
     header('LOCATION: ' . str_replace('https://', 'http://', LINK));
 endif;
 

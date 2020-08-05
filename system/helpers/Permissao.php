@@ -148,17 +148,17 @@
 					'per_institucional_cursos_deletar' => 'Deletar curso'
 				)
 			),
-			'institucional_mundos' => array(
-				'titulo' => 'Mundos',
-				'tabela' => 'mundos',
-				'model' => 'MundosModel',
-				'permissao' => 'per_institucional_mundos',
+			'institucional_tecnologia' => array(
+				'titulo' => 'tecnologia',
+				'tabela' => 'tecnologia',
+				'model' => 'tecnologiaModel',
+				'permissao' => 'per_institucional_tecnologia',
 				'lista' => array(
-					'per_institucional_mundos_visualizar' => 'Visualizar mundo',
-					'per_institucional_mundos_detalhe' => 'Detalhe do mundo',
-					'per_institucional_mundos_editar' => 'Editar mundo',
-					'per_institucional_mundos_add' => 'Adicionar mundo',
-					'per_institucional_mundos_deletar' => 'Deletar mundo'
+					'per_institucional_tecnologia_visualizar' => 'Visualizar tecnologia',
+					'per_institucional_tecnologia_detalhe' => 'Detalhe do tecnologia',
+					'per_institucional_tecnologia_editar' => 'Editar tecnologia',
+					'per_institucional_tecnologia_add' => 'Adicionar tecnologia',
+					'per_institucional_tecnologia_deletar' => 'Deletar tecnologia'
 				)
 			),
 			'publicacao_album' => array(
