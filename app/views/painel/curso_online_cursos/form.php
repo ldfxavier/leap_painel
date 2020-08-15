@@ -42,6 +42,9 @@ $volta = PAINEL . '/app/' . $_app;
 		<label>Título:</label>
 		<input type="text" data-tamanho="" name="titulo" value="<?= P::r($r, 'titulo'); ?>" placeholder="Digite um título">
 
+		<label>Professor:</label>
+		<input type="text" data-tamanho="" name="professor" value="<?= P::r($r, 'professor'); ?>" placeholder="Digite um professor">
+
 		<label>Chamada:</label>
 		<input type="text" data-tamanho="200" name="chamada" value="<?= P::r($r, 'chamada'); ?>" placeholder="Digite uma chamada">
 
@@ -58,10 +61,10 @@ $volta = PAINEL . '/app/' . $_app;
 		<div class="checkbox">
 			<div class="legenda">CATEGORIAS</div>
 			<?php
-			$categorias = $Painel->p_select('curso_online_categorias', 'id', 'titulo');
-			foreach ($categorias as $ind => $val) :
-				$valor = (isset($r->categorias) && in_array($ind, $r->categorias)) ? true : false;
-				echo Form::checkbox('categorias', $ind, $val, $valor, array('data-valor' => $valor));
+			$categoria = $Painel->p_select('curso_online_categorias', 'id', 'titulo');
+			foreach ($categoria as $ind => $val) :
+				$valor = (isset($r->categoria) && in_array($ind, $r->categoria)) ? true : false;
+				echo Form::checkbox('categoria', $ind, $val, $valor, array('data-valor' => $valor));
 			endforeach;
 			?>
 		</div>
@@ -69,6 +72,7 @@ $volta = PAINEL . '/app/' . $_app;
 
 	<fieldset>
 		<div class="legenda">PERMISSÕES</div>
+		<?= Form::booleano('gratuito', 'É gratúito?', P::r($r, 'gratuito->valor')); ?>
 		<?= Form::booleano('status', 'Ativar?', P::r($r, 'status->valor')); ?>
 	</fieldset>
 </div>

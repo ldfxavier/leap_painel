@@ -63,7 +63,7 @@ $equipe = $_SESSION['EQUIPE'];
 					//     array('Tecnologias', 'institucional_tecnologia', 0),
 					//     array('Cursos', 'institucional_cursos', 0),
 					// ));
-					Menu::principal('CURSOS ONLINE', $_app, '#00aced', array(
+					Menu::principal('CURSOS', $_app, '#00aced', array(
 						array('Categorias', 'curso_online_categorias', 0),
 						array('Cursos', 'curso_online_cursos', 0),
 						array('Aulas', 'curso_online_aulas', 0),

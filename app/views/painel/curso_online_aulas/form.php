@@ -43,9 +43,6 @@ $volta = PAINEL . '/app/' . $_app;
 		<label>Conteúdo:</label>
 		<?= Form::editor('conteudo', P::r($r, 'conteudo'), 'normal'); ?>
 
-		<label>Dicas:</label>
-		<?= Form::editor('dica', P::r($r, 'dica'), 'normal'); ?>
-
 		<label>Curso:</label>
 		<?php
 		$galeria = $Painel->p_select("curso_online_cursos", "id", "titulo", ["" => "Selecione um curso"]);

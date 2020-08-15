@@ -13,9 +13,10 @@ class CursoOnlineCursosModel extends Model
                 $array[] = (object)[
                     'id' => $r->id,
                     'cod' => $r->cod,
-                    'categorias' => json_decode($r->categorias),
+                    'categoria' => json_decode($r->categoria),
                     'titulo' => $r->titulo,
                     'texto' => $r->texto,
+                    'professor' => $r->professor,
                     'chamada' => $r->chamada,
                     'galeria' => $r->galeria,
                     'imagem' => (object)[
@@ -33,6 +34,11 @@ class CursoOnlineCursosModel extends Model
                         'link' => LINK . '/blog/' . $r->url,
                         'valor' => $r->url
                     ],
+                    'gratuito' => (object)array(
+                        'valor' => $r->gratuito,
+                        'texto' => $r->gratuito == 1 ? 'Sim' : 'Não',
+                        'cor' => $r->gratuito == 1 ? '#16A085' : '#E05D6F'
+                    ),
                     'status' => (object)array(
                         'valor' => $r->status,
                         'texto' => $r->status == 1 ? 'Ativo' : 'Inativo',
