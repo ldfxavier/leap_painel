@@ -18,7 +18,12 @@
 			$model = Permissao::model($app);
 			$Model = new $model;
 
-			$dado = $Model->montar($Model->read("`cod` = '{$cod}'"));
+			
+			if($app == 'usuario_usuario'):
+				$dado = $Model->montar($Model->read("`uuid` = '{$cod}'"));
+			else:
+				$dado = $Model->montar($Model->read("`cod` = '{$cod}'"));
+			endif;
 			if($dado) return $dado[0];
 		}
 

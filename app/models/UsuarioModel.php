@@ -20,15 +20,15 @@
 
                     $array[] = (Object)[
                         'id' => $r->id,
-                        'cod' => $r->cod,
+                        'cod' => $r->uuid,
                         'nome' => (object)[
                             'valor' => $r->nome,
                             'primeiro' => Converter::caixa($nome[0], 'A'),
                             'ultimo' => end($nome) != $nome[0] ? Converter::caixa(end($nome), 'A') : ''
                         ],
-                        'documento' => (object)[
-                            'valor' => $r->documento,
-                            'br' => Converter::documento($r->documento)
+                        'cpf' => (object)[
+                            'valor' => $r->cpf,
+                            'br' => Converter::documento($r->cpf)
                         ],
                         'email' => $r->email,
                         'telefone' => (object)[
@@ -73,7 +73,7 @@
         }
 
         public function cod($cod){
-            $dado = $this->montar($this->read("`cod` = '{$cod}'"));
+            $dado = $this->montar($this->read("`uuid` = '{$cod}'"));
             if($dado) return $dado[0];
         }
 

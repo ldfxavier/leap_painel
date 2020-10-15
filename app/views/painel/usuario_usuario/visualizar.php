@@ -25,7 +25,7 @@
 			<article class="bloco">
 				<header><h1>DADOS PESSOAIS</h1></header>
 				<p><span class="bold">Nome:</span> <?php echo P::filtro($r->nome->valor, 'Sem nome') ?></p>
-				<p><span class="bold">CPF:</span> <?php echo P::filtro($r->documento->br, 'Sem documento') ?></p>
+				<p><span class="bold">CPF:</span> <?php echo P::filtro($r->cpf->br, 'Sem cpf') ?></p>
 				<p><span class="bold">Nascimento:</span> <?php echo P::filtro($r->data->nascimento->br, 'Sem data') ?></p>
 			</article>
 

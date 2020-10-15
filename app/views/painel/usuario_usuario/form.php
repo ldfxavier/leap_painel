@@ -17,7 +17,7 @@
 <?php if(isset($r->id)): ?>
 <input type="hidden" name="id" value="<?= $r->id; ?>">
 <?php endif; ?>
-<input type="hidden" name="cod" value="<?= $cod; ?>">
+<input type="hidden" name="uuid" value="<?= $cod; ?>">
 
 <div class="linha">
 	<fieldset>
@@ -39,7 +39,7 @@
 		<div class="legenda">ACESSO</div>
 
 		<label>CPF:</label>
-		<?= Form::cpf('documento', P::r($r, 'documento->br')); ?>
+		<?= Form::cpf('cpf', P::r($r, 'cpf->br')); ?>
 
 		<label>E-mail:</label>
 		<input type="text" name="email" value="<?= P::r($r, 'email'); ?>" placeholder="Digite um e-mail">
